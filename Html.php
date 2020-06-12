@@ -44,7 +44,10 @@ class Html extends \yii\helpers\Html
             $content = Yii::t('app', 'Save');
         }
 
-        $options = ArrayHelper::merge(static::$saveButtonOptions, $options);
+        $options = ArrayHelper::merge(static::$saveButtonOptions, [
+            'name' => 'action',
+            'value' => 'save'
+        ], $options);
 
         return parent::submitButton($content, $options);
     }
