@@ -13,13 +13,22 @@ class Html extends \yii\helpers\Html
     
     static $saveButtonOptions = ['class' => 'btn btn-success'];
 
-    static $activeTextInputOptions = ['class' => 'form-control'];
+    static $textInputOptions = ['class' => 'form-control'];
+
+    static $dropdownListOptions = ['class' => 'form-control'];
 
     public static function activeTextInput($model, $attribute, $options = []) : string
     {
-        $options = ArrayHelper::merge(static::$activeTextInputOptions, $options);
+        $options = ArrayHelper::merge(static::$textInputOptions, $options);
 
         return parent::activeTextInput($model, $attribute, $options);
+    }
+
+    public static function activeDropdownList($model, $attribute, $list = [], $options = []) : string
+    {
+        $options = ArrayHelper::merge(static::$textInputOptions, $options);
+
+        return parent::activeDropdownList($model, $attribute, $list, $options);
     }
 
     public static function submitButton($content = null, $options = [])
