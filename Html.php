@@ -10,8 +10,8 @@ class Html extends \yii\helpers\Html
     static $submitButtonOptions = ['class' => 'btn btn-primary'];
     
     static $cancelButtonOptions = ['class' => 'btn btn-secondary'];
-    
-    static $saveButtonOptions = ['class' => 'btn btn-success'];
+            
+    static $saveButtonOptions = ['class' => 'btn btn-light'];
 
     static $textInputOptions = ['class' => 'form-control'];
 
